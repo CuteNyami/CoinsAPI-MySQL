@@ -1,0 +1,9 @@
+main: me.cutenyami.coinsapi.plugin.CoinsAPIMain
+name: CoinsAPI
+authors: [ byncing, CuteNyami]
+version: 1.0.0-SNAPSHOT
+
+commands:
+  coins:
+    permission: coins.use
+    permission-message: §c» §7Can't found needed Permission! §8[coins.use]
