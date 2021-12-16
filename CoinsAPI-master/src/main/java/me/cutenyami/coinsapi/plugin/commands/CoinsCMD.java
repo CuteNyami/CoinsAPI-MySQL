@@ -36,13 +36,13 @@ public class CoinsCMD implements CommandExecutor {
         }
 
         OfflinePlayer player = Bukkit.getOfflinePlayer(args[0]);
-        ICoinsUser user = plugin.getCoinsAPI().getUser(player.getUniqueId());
-
 
         if (!plugin.getCoinsAPI().existsUser(player.getUniqueId())) {
             sender.sendMessage(Utils.ERROR_PREFIX + "Can't found the Player " + args[0]);
             return false;
         }
+
+        ICoinsUser user = plugin.getCoinsAPI().getUser(player.getUniqueId());
 
         if (args.length == 1) {
             sender.sendMessage("§7User Info of " + user.getName());
@@ -93,8 +93,12 @@ public class CoinsCMD implements CommandExecutor {
     }
 
     public boolean isNumber(String string) {
-        int i = Integer.parseInt(string);
-        System.out.println(i);
-        return true;
+        try {
+            int i = Integer.parseInt(string);
+            System.out.println(i);
+            return true;
+        } catch (NumberFormatException exception) {
+            return false;
+        }
     }
 }
