@@ -2,7 +2,7 @@ package me.cutenyami.coinsapi.api;
 
 import java.util.UUID;
 
-public interface ICoinsAPIUser {
+public interface ICoinsUser {
 
     Object[] serialize();
 

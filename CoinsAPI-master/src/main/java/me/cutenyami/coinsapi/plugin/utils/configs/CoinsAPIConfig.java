@@ -1,4 +1,4 @@
-package me.cutenyami.coinsapi.plugin.utils;
+package me.cutenyami.coinsapi.plugin.utils.configs;
 
 import me.cutenyami.coinsapi.json.JsonFile;
 import eu.byncing.sql.lib.Profile;

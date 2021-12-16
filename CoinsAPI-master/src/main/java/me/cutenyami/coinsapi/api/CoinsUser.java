@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.UUID;
 
 
-public class CoinsAPIUser implements ICoinsAPIUser {
+public class CoinsUser implements ICoinsUser {
 
     private final CoinsAPI api;
 
@@ -12,15 +12,15 @@ public class CoinsAPIUser implements ICoinsAPIUser {
     private final String name;
     private int coins;
 
-    public CoinsAPIUser(CoinsAPI api, UUID uniqueId, String name, int bits) {
+    public CoinsUser(CoinsAPI api, UUID uniqueId, String name, int bits) {
         this.api = api;
         this.uniqueId = uniqueId;
         this.name = name;
         this.coins = bits;
     }
 
-    public static ICoinsAPIUser deserialize(CoinsAPI api, Map<String, Object> values) {
-        return new CoinsAPIUser(
+    public static ICoinsUser deserialize(CoinsAPI api, Map<String, Object> values) {
+        return new CoinsUser(
                 api,
                 UUID.fromString((String) values.get("UUID")),
                 ((String) values.get("NAME")),
