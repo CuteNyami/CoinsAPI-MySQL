@@ -1,7 +1,7 @@
-package me.cutenyami.coinsapi.plugin.utils.placeholder;
+package me.cutenyami.coinsapi.plugin.utils.placeholderapi;
 
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
-import me.cutenyami.coinsapi.api.ICoinsAPIUser;
+import me.cutenyami.coinsapi.api.ICoinsUser;
 import me.cutenyami.coinsapi.plugin.CoinsAPIMain;
 import org.bukkit.entity.Player;
 
@@ -44,7 +44,7 @@ public class SpigotExpansion extends PlaceholderExpansion {
             return "";
         }
         if (params.equals("coins")) {
-            ICoinsAPIUser user = plugin.getBitsAPI().getUser(p.getUniqueId());
+            ICoinsUser user = plugin.getCoinsAPI().getUser(p.getUniqueId());
             return "" + user.getCoins();
         }
 

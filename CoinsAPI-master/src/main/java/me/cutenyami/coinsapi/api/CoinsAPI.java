@@ -53,11 +53,11 @@ public class CoinsAPI {
         pool.execute(() -> table.insert(uniqueId, name, 0));
     }
 
-    public ICoinsAPIUser getUser(UUID uniqueId) {
+    public ICoinsUser getUser(UUID uniqueId) {
         if (!isConnected()) return null;
         TableFetch fetch = table.fetch();
         fetch.setWhere("UUID").setWhereValues(uniqueId);
-        return CoinsAPIUser.deserialize(this, fetch.single("UUID", "NAME", "COINS"));
+        return CoinsUser.deserialize(this, fetch.single("UUID", "NAME", "COINS"));
     }
 
     public static CoinsAPI getInstance() {
