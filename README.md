@@ -15,7 +15,7 @@ dependencies {
 ````
 
 ### Maven
-````gradle
+````xml
 <repositories>
     <repository>
         <id>coins</id>
