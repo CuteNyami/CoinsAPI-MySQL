@@ -3,13 +3,35 @@ A MySQL based Coins API
 ### Gradle
 ````gradle
 repositories {
-    maven { url('SOON') }
+    maven {
+        url = "http://tykopvp.com/"
+        allowInsecureProtocol(true)
+    }
 }
 
 dependencies {
-    implementation('SOON')
+    compileOnly("com.tykopvp:coinsapi:1.0")
 }
 ````
+
+### Maven
+````maven
+    <repositories>
+        <repository>
+            <id>coins</id>
+            <url>http://tykopvp.com/</url>
+        </repository>
+    </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>com.tykopvp</groupId>
+            <artifactId>coinsapi</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+````
+
 &nbsp;
 &nbsp;
 ### » Spigot Example
