@@ -15,21 +15,21 @@ dependencies {
 ````
 
 ### Maven
-````Maven
-    <repositories>
-        <repository>
-            <id>coins</id>
-            <url>http://tykopvp.com/</url>
-        </repository>
-    </repositories>
-    <dependencies>
-        <dependency>
-            <groupId>com.tykopvp</groupId>
-            <artifactId>coinsapi</artifactId>
-            <version>1.0</version>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
+````gradle
+<repositories>
+    <repository>
+        <id>coins</id>
+        <url>http://tykopvp.com/</url>
+    </repository>
+</repositories>
+<dependencies>
+    <dependency>
+        <groupId>com.tykopvp</groupId>
+        <artifactId>coinsapi</artifactId>
+        <version>1.0</version>
+        <scope>provided</scope>
+    </dependency>
+</dependencies>
 ````
 
 &nbsp;
