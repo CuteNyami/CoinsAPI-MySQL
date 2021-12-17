@@ -15,7 +15,7 @@ dependencies {
 ````
 
 ### Maven
-````maven
+````Maven
     <repositories>
         <repository>
             <id>coins</id>
