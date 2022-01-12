@@ -59,7 +59,7 @@ public void handle(PlayerJoinEvent event) {
 You can use the API on a BungeeCord Proxy too!
 
 ````java
-//You can of course also do the same with velocity it is important that you always connect the BitsAPI to the database!
+//You can of course also do the same with velocity it is important that you always connect the CoinsAPI to the database!
 @Override
 public void onEnable() {
     CoinsAPI.getInstance().connect(3, new Profile("127.0.0.1", 3306, "root", "coins", null));
