@@ -66,7 +66,7 @@ public void onEnable() {
 }
 @Override
 public void onDisable() {
-    BitsAPI.getInstance().disconnect();
+    CoinsAPI.getInstance().disconnect();
 }
 ````
 &nbsp;
